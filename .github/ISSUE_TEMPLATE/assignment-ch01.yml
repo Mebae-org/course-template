@@ -7,21 +7,22 @@ body:
   - type: markdown
     attributes:
       value: |
-        各問について、答えだけでなく、考え方が分かる途中式または説明を記述してください。
-  - type: textarea
+        各問の答えを半角数字で入力してください。単位や途中式は入力しないでください。
+        Issue の作成後、GitHub Actions が自動で採点します。回答を修正すると再採点されます。
+  - type: input
     id: q1
     attributes:
       label: 問1
-      description: "[QUESTION 1]"
-      placeholder: 答えと途中式または説明を入力
+      description: "[NUMERIC QUESTION 1]"
+      placeholder: "例: 42 または 3.14"
     validations:
       required: true
-  - type: textarea
+  - type: input
     id: q2
     attributes:
       label: 問2
-      description: "[QUESTION 2]"
-      placeholder: 答えと途中式または説明を入力
+      description: "[NUMERIC QUESTION 2]"
+      placeholder: "例: -5 または 1.2e3"
     validations:
       required: true
   - type: checkboxes

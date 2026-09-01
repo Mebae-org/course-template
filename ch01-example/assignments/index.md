@@ -6,13 +6,13 @@
 - 提出方法: [課題 01 提出フォーム（Issue）](https://github.com/Mebae-org/course-template/issues/new?template=assignment-ch01.yml)
 - 提出期限: [YYYY-MM-DD HH:MM TZ]
 
-各問について、答えだけでなく、考え方が分かる途中式または説明を記述してください。
+各問の答えを半角数字で入力してください。単位や途中式は入力しません。Issue の作成後、GitHub Actions が自動で採点します。回答を修正すると再採点されます。
 
 ## 問1（[POINTS] 点）
 
-[QUESTION 1]
+[NUMERIC QUESTION 1]
 
 ## 問2（[POINTS] 点）
 
-[QUESTION 2]
+[NUMERIC QUESTION 2]
 <!-- /MAGI -->

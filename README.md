@@ -16,7 +16,7 @@
 1. 各章の `README.md` で概要と学習目標を確認します。
 2. `docs/` で内容を学びます。
 3. `exercises/` で理解を確認します。
-4. `assignments/` の課題に取り組み、指定の方法で提出します。
+4. `assignments/` の課題に取り組み、Issue フォームから数値で回答します。GitHub Actions が回答を自動採点します。
 
 ## 章一覧
 
@@ -34,7 +34,10 @@
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── LICENSE-CODE
+├── scripts/            正答ハッシュ生成などの補助スクリプト
 ├── .github/
+│   ├── scripts/       自動採点処理
+│   └── workflows/     GitHub Actions ワークフロー
 └── chNN-short-name/
     ├── README.md
     ├── docs/

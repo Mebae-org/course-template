@@ -57,6 +57,22 @@ chNN-short-name/
 - `**答: ...**` より後ろは解説として扱われます。
 - コロンは半角の `:`、選択肢の区切りは半角スペースを含む ` / ` を使います。
 
+## 提出課題の自動採点
+
+- 提出課題は、Issue フォームから単位を含まない半角数字で回答できる問題にします。
+- 問題文は `chNN-short-name/assignments/index.md` と `.github/ISSUE_TEMPLATE/assignment-chNN.yml` の両方で一致させます。
+- 正答を公開しないため、平文ではなく正規化後の SHA-256 ハッシュを `.github/scripts/grade-assignment.js` に設定します。
+- Issue のタイトルは `[課題NN]` で始めます。この番号に対応する `chNN` のハッシュを GitHub Actions が読み込みます。
+- 問を増減する場合は、Issue フォームのラベルと `assignments` 内の `label` を一致させます。
+
+正答ハッシュは次のコマンドで生成します。コマンド出力だけを `hash` に設定し、正答の平文はファイルに残しません。
+
+```shell
+node scripts/make-answer-hash.js "42"
+```
+
+ハッシュ照合は正規化後の文字列に対する厳密一致です。たとえば `3.14` と `3.140` を両方正解にする場合は、問題文で入力形式を指定するか、許容する各表記の扱いを採点処理に追加します。
+
 ## Pull Request の手順
 
 1. リポジトリを fork し、作業用ブランチを作成します。
